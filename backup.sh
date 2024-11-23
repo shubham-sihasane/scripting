@@ -28,6 +28,12 @@ tar czf $dest/$archive_file $backup_files
 echo
 echo "Backup finished"
 date
+
+# Now you can create cron job in server with schedule
+# install crond if not installed already
+# crontab -e -> will open 
+# Add logic for scheduling script
+# Ex. 0 * * * * /home/ec2-user/backup -> This will execute backup script every hour.
     
 # Long listing of files in $dest to check file sizes.
 ls -lh $dest
